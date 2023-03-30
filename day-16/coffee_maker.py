@@ -26,3 +26,6 @@ class CoffeeMaker:
         for resource in self.resource_list:
             self.initial_resources[resource] -= self.INGREDIENT_CONSUMPTION[drink.name][resource]
         print(f"Here is your {drink.name}☕")
+    
+    def report(self):
+        print(f"The resources are {self.initial_resources}")

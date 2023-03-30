@@ -10,6 +10,9 @@ while True:
     if order_name.casefold() == "r":
         money_machine.report()
         continue
+    if order_name.casefold() == "s":
+        coffe_maker.report()
+        continue
     drink = menu.find_drink(order_name)
     if drink != False:
         if coffe_maker.is_resource_sufficient(drink) == True:
@@ -18,7 +21,7 @@ while True:
                 coffe_maker.make_coffee(drink)
                 money_machine.money_reserve -= drink.cost
             else:
-                print("There is not enough money! Please insert more\n") # ne kadar daha para eklenmesi gerekiyor?
+                print(f"There is not enough money! Please insert {drink.cost - money_machine.money_reserve}$")
                 continue
     else:
         print("Lütfen doğru bir içecek ismi giriniz\n")
