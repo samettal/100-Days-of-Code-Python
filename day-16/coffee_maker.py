@@ -12,7 +12,7 @@ class CoffeeMaker:
                                              "coffee": 24}}
     
     def __init__(self):
-        self.initial_resources = {"water": 300, "milk": 200, "coffee": 100}
+        self.initial_resources = {"water": 700, "milk": 500, "coffee": 200}
         self.resource_list = ["water", "milk", "coffee"]
     
     def is_resource_sufficient(self, drink) -> bool:
