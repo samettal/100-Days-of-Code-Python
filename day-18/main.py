@@ -10,21 +10,21 @@ timmy.penup()
 timmy.goto(-300,300)
 timmy.speed(9)
 
-COLORS_LIST = ["royalblue",'aqua',"aquamarine4","bisque4","blue violet","brown","brown1","CadetBlue1","coral4","cyan1","dark orange","DeepPink","forestgreen"]
-my_colors = COLORS_LIST
-
-
 def extract_color() -> list: # resimdeki en sık karşılaşılan 10 rengi tuple listesi halinde verir.
     most_frequent_colors = colorgram.extract("image.jpg", 10)
     my_colors = []
     for color in most_frequent_colors:
         my_colors.append(tuple(color.rgb))
+    my_colors.pop(0)
+    my_colors.pop(1)
+    my_colors.pop(2)
     return my_colors
 
 def arrange_color(my_colors): # timmy renk değiştirir.
     curr_color = random.choice(my_colors)
     return curr_color
 
+my_colors = extract_color()
 
 # 4 satır 7 sütun büyüklüğünde renkleri değişen noktalar koyalım:
 DOT_SIZE = 30
