@@ -4,7 +4,7 @@ import random
 
 timmy = Turtle()
 screen = Screen()
-screen.colormode(255)
+screen.colormode(255) # turtle modülünün ya da turtle modülü içindeki Screen sınıfına ait bir nesnenin (ikisi de olur) colormode özelliğini istenilen şekilde ayarlamak önemli.
 timmy.hideturtle()
 timmy.penup()
 timmy.goto(-300,300)
